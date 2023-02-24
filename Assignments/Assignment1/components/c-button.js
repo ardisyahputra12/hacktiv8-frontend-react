@@ -24,14 +24,14 @@ class CButton extends HTMLElement {
             const mul = () => parseFloat(mulVal[0]) * parseFloat(mulVal[1]);
             const div = () => parseFloat(divVal[0]) / parseFloat(divVal[1]);
 
-            const changeOperation = (...operation) => {
-                let lastChar = val[val.length - 1];
-                operation.forEach(el => {
-                    if (val.endsWith(el)) {
-                        val = val.substring(0, val.length - 1);
-                    }
-                });
-            }
+            // const changeOperation = (...operation) => {
+            //     let lastChar = val[val.length - 1];
+            //     operation.forEach(el => {
+            //         if (val.endsWith(el)) {
+            //             val = val.substring(0, val.length - 1);
+            //         }
+            //     });
+            // }
 
             if (val.includes('+') && this.textContent == '=') {
                 val = add();
