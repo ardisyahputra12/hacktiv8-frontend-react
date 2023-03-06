@@ -13,10 +13,10 @@ class CButton extends HTMLElement {
         const output = document.querySelector(".output");
 
         this.addEventListener("click", () => {
-            let result = parseFloat(0);
-            let currVal = 0;
-            let operanVal = [];
-            let tempVal = parseFloat(output.textContent);
+            // let result = parseFloat(0);
+            // let currVal = 0;
+            // let operanVal = [];
+            // let tempVal = parseFloat(output.textContent);
             let val = output.textContent;
             const addVal = val.split("+");
             const subVal = val.split("-");
@@ -32,22 +32,22 @@ class CButton extends HTMLElement {
                 const operation = ["+", "-", "*", "/"];
                 // tempVal = 0;
                 operation.forEach((el1) => {
-                    if (val.includes(el1)) {
-                        operanVal.push(el1);
-                    }
-                    if (this.textContent == el1) {
-                        if (operanVal.length > 1) {
-                            currVal = tempVal;
-                            switch (operanVal.length > 1 ? operanVal[operanVal - 2] : operanVal[0]) {
-                                case '+': result += parseFloat(currVal);
-                                case '-': result -= parseFloat(currVal);
-                                case '*': result *= parseFloat(currVal);
-                                case '/': result /= parseFloat(currVal);
-                            }
-                        } else {
-                            result = tempVal;
-                        }
-                    }
+                    // if (val.includes(el1)) {
+                    //     operanVal.push(el1);
+                    // }
+                    // if (this.textContent == el1) {
+                    //     if (operanVal.length > 1) {
+                    //         currVal = tempVal;
+                    //         switch (operanVal.length > 1 ? operanVal[operanVal - 2] : operanVal[0]) {
+                    //             case '+': result += parseFloat(currVal);
+                    //             case '-': result -= parseFloat(currVal);
+                    //             case '*': result *= parseFloat(currVal);
+                    //             case '/': result /= parseFloat(currVal);
+                    //         }
+                    //     } else {
+                    //         result = tempVal;
+                    //     }
+                    // }
                     operation.forEach((el2) => {
                         if (val[val.length - 1] == el1 && val[val.length - 2] == el2) {
                             val = val.substring(0, val.length - 2) + val[val.length - 1];
@@ -56,16 +56,16 @@ class CButton extends HTMLElement {
                 });
             };
 
-            // if (val.includes("+") && this.textContent == "=") {
-            //     val = add();
-            // } else if (val.includes("-") && this.textContent == "=") {
-            //     val = sub();
-            // } else if (val.includes("*") && this.textContent == "=") {
-            //     val = mul();
-            // } else if (val.includes("/") && this.textContent == "=") {
-            //     val = div();
-            if (this.textContent == '=') {
-                val = result;
+            if (val.includes("+") && this.textContent == "=") {
+                val = add();
+            } else if (val.includes("-") && this.textContent == "=") {
+                val = sub();
+            } else if (val.includes("*") && this.textContent == "=") {
+                val = mul();
+            } else if (val.includes("/") && this.textContent == "=") {
+                val = div();
+                // if (this.textContent == '=') {
+                //     val = result;
             } else if (this.textContent == "CE") {
                 val.length == 1 ? (val = 0) : (val = val.substring(0, val.length - 1));
             } else if (this.textContent == "AC") {
@@ -75,8 +75,7 @@ class CButton extends HTMLElement {
                 changeOperation();
             }
             output.textContent = val;
-            console.log(result);
-
+            // console.log(result);
         });
     }
 }
