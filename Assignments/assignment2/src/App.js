@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Table } from 'react-bootstrap';
 import { Thead } from './components/Thead';
 import { Tbody } from './components/Tbody';
