@@ -5,6 +5,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #dc7000 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+td,
+th {
+  font-size: 24px;
+}
+
+td,
+th,
+p {
+  color: white !important;
+  text-align: center !important;
 }
 
 code {
