@@ -1,4 +1,6 @@
 import React from 'react'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 export const About = () => {
   return (
@@ -22,6 +24,14 @@ export const About = () => {
           Halo, this is my portfolio.
           <br /> My passion is about software development and I like to coding. My skill in programming is started in 2020. I have studied round about frontend web development, backend development, and mobile development (android). I am a capable of teamwork, responsible, adaptable, and I am willing to learn new things.
         </p>
+        <div>
+          <Link to='https://github.com/ardisyahputra12' className='me-4'>
+            <FaGithub size='40' fill='#fff' />
+          </Link>
+          <Link to='https://www.linkedin.com/in/ardisaputra2022/' className='me-4'>
+            <FaLinkedin size='40' fill='#fff' />
+          </Link>
+        </div>
       </div>
     </div>
   )
