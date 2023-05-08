@@ -19,7 +19,7 @@ export const NavBar = () => {
         </Link>
         <FaBars size='35' fill='#fff' onClick={handleShow} />
       </div>
-      <div className="d-none d-lg-block pt-2 pb-2 bg-dark position-fixed start-0 end-0 border-bottom">
+      <div className="d-none d-lg-block pt-2 pb-2 bg-dark position-fixed start-0 end-0 border-bottom" style={{ zIndex: 999 }}>
         <Nav variant="pills" defaultActiveKey='/' activeKey={activeKey} className='justify-content-center'>
           <NavItem title='Home' path='/' />
           <NavItem title='Experience' path='/experience' />
