@@ -1,0 +1,10 @@
+body {
+  background-color: rgb(33, 37, 41);
+  color: #fff;
+}
+
+.active {
+  background-color: transparent !important;
+  color: #e74343 !important;
+  font-weight: bold;
+}
