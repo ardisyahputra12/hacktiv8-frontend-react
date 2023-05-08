@@ -53,7 +53,7 @@ export const NavBar = () => {
               <div className='border-bottom w-100 text-center pb-2 pt-2' onClick={handleClose}>
                 <NavItem title='Certificate' path='/certificate' />
               </div>
-              <div className='border-bottom w-100 text-center pb-2 pt-2' onClick={handleClose}>
+              <div className='w-100 text-center pb-2 pt-2' onClick={handleClose}>
                 <NavItem title='Contact' path='/contact' />
               </div>
             </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardEducation } from '../components/CardEducation'
+import { CardGeneral } from '../components/CardGeneral'
 import { educations } from '../data/education.data'
 
 export const Education = () => {
@@ -8,7 +8,7 @@ export const Education = () => {
       <h2 className='text-center mb-5' id="education">Education</h2>
       {
         educations.map(education => {
-          return <CardEducation {...education} key={education.id} />
+          return <CardGeneral {...education} key={education.id} />
         }).reverse()
       }
     </>

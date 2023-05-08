@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const CardEducation = ({ organization, study, year, website, other }) => {
+export const CardGeneral = ({ organization, study, year, website, other }) => {
   return (
     <div className='shadow rounded p-3 mb-4 d-flex flex-wrap justify-content-between align-items-center'>
       <div>
         <a href={website} target='_blank' rel="noreferrer" className='text-decoration-none'>
-          <h4 style={{ color: '#e74343' }}>{organization}</h4>
+          <h4 className='text-white'>{organization}</h4>
         </a>
         <p>{study}</p>
         <p>{other}</p>
@@ -18,7 +18,7 @@ export const CardEducation = ({ organization, study, year, website, other }) => 
   )
 }
 
-CardEducation.propTypes = {
+CardGeneral.propTypes = {
   organization: PropTypes.string.isRequired,
   study: PropTypes.string.isRequired,
   year: PropTypes.string.isRequired,
