@@ -10,11 +10,17 @@ export const NavBar = () => {
 
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
+  const bottomToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  }
 
   return (
     <div>
-      <div className='d-lg-none p-3 bg-dark d-flex justify-content-between position-fixed start-0 end-0'>
-        <Link to='/' className='text-decoration-none'>
+      <div className='d-lg-none p-3 bg-dark d-flex justify-content-between position-fixed start-0 end-0' style={{ zIndex: 999 }}>
+        <Link to='/' className='text-decoration-none' onClick={bottomToTop}>
           <h1 className='brand m-0 text-white'>Portfolio</h1>
         </Link>
         <FaBars size='35' fill='#fff' onClick={handleShow} />
@@ -32,7 +38,9 @@ export const NavBar = () => {
       <Offcanvas show={show} onHide={handleClose} className="bg-dark">
         <Offcanvas.Header closeButton closeVariant='white'>
           <Offcanvas.Title>
-            <h1 className='brand m-0 text-white'>Portfolio</h1>
+            <Link to='/' className='text-decoration-none' onClick={() => { handleClose(); bottomToTop(); }}>
+              <h1 className='brand m-0 text-white'>Portfolio</h1>
+            </Link>
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
