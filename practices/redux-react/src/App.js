@@ -1,7 +1,8 @@
 import React from 'react'
 import './App.css'
+import { AuthLoginForm } from './features/auth/AuthLoginForm'
 // import { CounterFn } from './features/counter/CounterFnComponent'
-import { UsersList } from './features/users/UsersList'
+// import { UsersList } from './features/users/UsersList'
 // import { CounterClass } from './features/counter/CounterClassComponent'
 // import { Counter } from './features/counter/Counter'
 
@@ -10,10 +11,16 @@ import { UsersList } from './features/users/UsersList'
 export const App = () => {
   return (
     <main className='App container'>
+      {/* --- learn redux --- */}
       {/* <CounterFn /> */}
       {/* <CounterClass /> */}
       {/* <Counter /> */}
-      <UsersList />
+
+      {/* --- learn redux middleware, async thunk, get data users from API */}
+      {/* <UsersList /> */}
+
+      {/* --- login with react & redux --- */}
+      <AuthLoginForm />
     </main>
   )
 }
